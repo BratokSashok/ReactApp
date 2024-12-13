@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Counter from "../counter/counter";
+import Counter from "../counter/Counter";
 import "./MyComponent.css" ; 
 
 const MyComponent = ({title, description}) => {
@@ -12,10 +12,6 @@ const MyComponent = ({title, description}) => {
         <div className="my-component-container">
             <h1 className="my-component-title">{title}</h1>
             <p className="my-component-description">{description}</p>
-
-            <br />
-
-            <Counter />
         </div>
     );
 };

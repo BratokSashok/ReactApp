@@ -1,24 +1,26 @@
 import React, {useState} from "react";
-import "./counter.css";
-import Button from "../common/buttonComponents/ButtonComponent";
+import "./Counter.css";
+import MyButton from "../common/buttonComponents/ButtonComponent";
 
 const Counter = () => {
     const [count, setCount] = useState(0);
 
     return(
         <div>
-                <h2>{count} good memes with cats</h2>
+                <h2>{count} bad thougts in my head</h2>
             {/* Reset count to its previous value - 1 */}
-                <Button 
-                onClick={() => setCount(count - 1)}>
+                <MyButton 
+                onClick={() => setCount(count - 1)}
+                
+                >
                 -
-                </Button>
-
+                </MyButton>
+                
                 {/* Reset count to its previous value + 1 */}
-                <Button 
+                <MyButton 
                 onClick={() => setCount(count + 1)}>
                 +
-                </Button>
+                </MyButton>
                 <h3>'+' or '-' to increase\decrease</h3>
             {/* <h3>Count them and submit ur answer ↓ here</h3>
             <Button

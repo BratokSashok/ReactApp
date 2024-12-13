@@ -1,6 +1,9 @@
 import './App.css'
 import MyComponent from './components/myComponents/MyComponent';
-import Button from './components/common/buttonComponents/ButtonComponent.jsx';
+import MyButton from './components/common/buttonComponents/ButtonComponent.jsx';
+import SummaryFunction from './components/SummaryFunction/SummaryFunction';
+import Counter from './components/counter/Counter';
+import PositiveSummary from './components/onlyPositiveSummary/PositiveSummary';
 
 function App() {
 
@@ -8,16 +11,23 @@ function App() {
     <>
       <div>
       <h1>React Component Tutorial</h1>
+      <br />
       <MyComponent
          title="User's header" 
          description="This is header"
       /> {/* Это обображает пользовательский контент*/}
       <br />
-      <Button
+      <MyButton
         onClick={() => alert("Button is pushed!")}
       >
         Push me
-      </Button>
+      </MyButton>
+      <br />
+      <Counter />
+      <br />
+      <SummaryFunction />
+      <br />
+      <PositiveSummary />
       </div>
     </>
   );

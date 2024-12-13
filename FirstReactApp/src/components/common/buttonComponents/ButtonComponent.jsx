@@ -1,9 +1,14 @@
-import "./buttonComponent.css" ; 
+import "./ButtonComponent.css" ; 
 
-const Button = ({ onClick, children }) => {
+
+const MyButton = ({ onClick, children }) => {
     return(
-        <button onClick={onClick}>{children}</button>
+        <button onClick={onClick}
+            className="my_button"
+        >
+            {children}
+        </button>
     )
 };
 
-export default Button;
+export default MyButton;
