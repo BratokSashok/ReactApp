@@ -1,10 +1,11 @@
 .my_button {
-    width: 100px;
-    height: 30px;
+    width: 125px;
+    height: 50px;
     margin: 5px;
     color: aliceblue;
     background-color: black;
     border-radius: 2px;
-    font-size: larger;
+    font-size: large;
+    font-weight: bold;
 }
 
