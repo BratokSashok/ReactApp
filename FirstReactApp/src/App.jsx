@@ -1,36 +1,15 @@
-import './App.css'
-import MyComponent from './components/myComponents/MyComponent';
-import MyButton from './components/common/buttonComponents/ButtonComponent.jsx';
-import SummaryFunction from './components/SummaryFunction/SummaryFunction';
-import Counter from './components/counter/Counter';
-import PositiveSummary from './components/onlyPositiveSummary/PositiveSummary';
+import './App.css';
+import React from 'react';
+import Header from './components/common/headerComponents/HeaderComponent';
+import { Outlet } from 'react-router';
 
 function App() {
-
   return (
-    <>
-      <div>
-      <h1>React Component Tutorial</h1>
-      <br />
-      <MyComponent
-         title="User's header" 
-         description="This is header"
-      /> {/* Это обображает пользовательский контент*/}
-      <br />
-      <MyButton
-        onClick={() => alert("Button is pushed!")}
-      >
-        Push me
-      </MyButton>
-      <br />
-      <Counter />
-      <br />
-      <SummaryFunction />
-      <br />
-      <PositiveSummary />
-      </div>
-    </>
+    <div>
+      <Header />
+      <Outlet />
+    </div>
   );
 }
 
-export default App
+export default App;
