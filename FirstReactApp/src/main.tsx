@@ -1,11 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from './App.jsx'
-import { createBrowserRouter } from 'react-router-dom';
 import store from './store'
-import { Provider } from 'react-redux'
-import Counter from "components/counter/Counter.tsx";
-import Home from "components/pages/HomePage/Home.ts";
+import { Provider} from 'react-redux'
+import { RouterProvider, createBrowserRouter } from 'react-router'
+import Counter from "components/counter/counter";
+import Home from "components/pages/HomePage/Home";
+
 
 const router = createBrowserRouter([
   {

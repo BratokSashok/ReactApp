@@ -1,18 +1,23 @@
 {
   "compilerOptions": {
-   "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-   "module": "commonjs",                                /* Specify what module code is generated. */
-   "jsx": "preserve",                                /* Specify what JSX code is generated. */
-   "strict": true,     
+    "target": "es2016",
+    "module": "commonjs",
+    "jsx": "react-jsx",
     "moduleResolution": "node",
+    "esModuleInterop": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./src",
-   /* Modules */
-   "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-   "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-    /* Type Checking */
-   "skipLibCheck": true,
-   "paths": {
-    "@components/*":["@components/*"],
-   }
+    "paths": {
+      "@components": ["components/*"]
+    },
+    "lib": ["dom", "esnext"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "noEmit": true
   }
 }
