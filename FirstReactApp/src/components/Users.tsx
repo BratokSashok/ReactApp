@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from "react"
 import axiosInstance from "../api/axiosInstance";
 
+interface Users{
+    id: number,
+    name: string,
+    birthday?: string 
+}
+
+interface User{
+    users: Users[]
+}
+
 const Users = () => {
-    const [users, setusers] = useState([]);
+    const [users, setusers] = useState<Users>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -27,11 +37,12 @@ const Users = () => {
         <div>
             <h1>Users list</h1>
             <ul>
-                {users.map((user) => {
-                    <li key={user.id}>
-                        {user.name} ({user.email})
+                {users.map((user) => (
+                      <li key={user.id}>
+                        {ser.name} ({user.email})
                     </li>
-                })}
+                    )
+                )}
             </ul>
         </div>
     );
